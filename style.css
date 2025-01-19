@@ -1,137 +1,296 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
 
 body {
-  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  background-image: url(images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); 
+  z-index: -1;
 }
 
 header {
-  background-color: #3b5998;
-  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 20px 0;
   text-align: center;
-  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  margin: 0;
-}
 
 nav {
-  background-color: #fff;
-  padding: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: #667eea; 
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
+  color: white;
   text-decoration: none;
-  color: #3b5998;
-  margin: 0 1rem;
-  font-weight: bold;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #1d3557;
+  color: #764ba2; 
 }
 
-article {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #fff;
+
+.blog-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 40px; 
+  padding: 20px;
+}
+
+
+.blog-post {
+  width: 100%; 
+  max-width: 1200px; 
+  background: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
 }
 
-article h2 {
-  color: #3b5998;
-  margin-bottom: 1rem;
+.blog-post:hover {
+  transform: scale(1.02); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
 }
 
-article p {
-  margin-bottom: 1rem;
+.image-container {
+  position: relative;
+  width: 60%; 
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-footer {
+.blog-image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(102, 126, 234, 0.9); 
+  color: white;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+.blog-post:hover .overlay {
+  transform: translateY(0); 
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.overlay .description {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.catchy-sentence {
+  width: 40%; 
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  text-align: left; 
+}
+
+
+#about-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#about-section article {
+  background: rgba(255, 255, 255, 0.8); 
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about-section article:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.team-member {
   text-align: center;
-  margin-top: 2rem;
-  padding: 1rem 0;
-  background-color: #3b5998;
-  color: #fff;
 }
 
-header,
-nav,
-footer {
-  text-align: center;
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 3px solid #667eea; /
 }
 
-article {
-  text-align: left;
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
-nav a,
-footer {
-  margin: 0.5rem 0;
+.team-member h3 {
+  margin: 10px 0 5px;
+  color: #667eea;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+#contact-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#contact-section article {
+  background: rgba(255, 255, 255, 0.8); 
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-section article:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 form label {
+  margin-bottom: 5px;
   font-weight: bold;
-  color: #3b5998;
-  margin-bottom: 0.5rem;
+  color: #333;
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
+form input, form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  color: #333;
-  background-color: #f9f9f9;
-  transition: border-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.9); 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form textarea:focus {
-  border-color: #3b5998;
-  outline: none;
-}
-
-form textarea {
-  resize: vertical;
-  min-height: 150px;
+form input:focus, form textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.5); 
 }
 
 form button {
-  padding: 0.75rem;
-  background-color: #3b5998;
-  color: #fff;
+  background: #667eea;
+  color: white;
+  padding: 10px;
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
-  background-color: #1d3557;
+  background: #764ba2;
+}
+
+
+footer {
+  background: white ; 
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reach-us {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reach-us h2 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.reach-us ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reach-us ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+footer p {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
 }
