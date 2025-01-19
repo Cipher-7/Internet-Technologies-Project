@@ -1,29 +1,30 @@
-*,*::before,::after{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*, *::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root{
-  --primary-color: #FFFFFF;
-  --secondary-color: #E0DED5;
-  --text-color:#000000;
-  --tertiary-color:#F5F5F5;
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #e0ded5;
+  --text-color: #000000;
+  --tertiary-color: #f5f5f5;
 }
 body {
-  font-family: 'Poppins','Arial', sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   background: var(--primary-color);
   color: var(--text-color);
   position: relative;
 }
 nav {
-  display:flex;
-  background: var(--primary-color); 
+  display: flex;
+  background: var(--primary-color);
   height: 50px;
-  padding:10px 100px;
+  padding: 10px 100px;
   text-align: center;
   border-bottom: 1px solid var(--text-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  gap:16px;
+  gap: 16px;
   align-items: center;
 }
 
@@ -32,7 +33,7 @@ nav a {
   text-decoration: none;
   font-size: 1.1rem;
 }
-nav a.logo{
+nav a.logo {
   font-weight: bold;
 }
 
@@ -43,85 +44,83 @@ footer p {
 }
 
 footer {
-  background-color:var(--text-color);
+  background-color: var(--text-color);
   text-align: center;
   padding: 20px 0;
   margin-top: 20px;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* index.html specific styles */ 
+/* index.html specific styles */
 .blog-container {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 32px; 
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
   padding: 24px 100px;
 }
 
-
 .blog-post {
-  height:300px;
-  display: flex; 
-  align-items: center; 
+  height: 300px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 16px; 
-  width: 100%; 
-  max-width: 1200px; 
-  background: var(--tertiary-color); 
+  gap: 16px;
+  width: 100%;
+  max-width: 1200px;
+  background: var(--tertiary-color);
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 @media (max-width: 768px) {
-  nav{
-    padding:16px 32px;
+  nav {
+    padding: 16px 32px;
   }
-  .blog-container{
-    padding: 24px 32px; 
+  .blog-container {
+    padding: 24px 32px;
   }
-  .blog-post{
+  .blog-post {
     flex-direction: column;
-    height:fit-content;
+    height: fit-content;
   }
-  .blog-post .overlay{
-  transform: translateY(0); 
+  .blog-post .overlay {
+    transform: translateY(0);
   }
 }
 
 .blog-post:hover {
-  transform: scale(1.02); 
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.02);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .image-container {
   position: relative;
   height: 100%;
-  flex:1;
+  flex: 1;
   border-radius: 8px;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
-  background:var(--secondary-color);
-  overflow:hidden;
+  background: var(--secondary-color);
+  overflow: hidden;
 }
 
 .blog-image {
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
-
 
 .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--text-color); 
+  background: var(--text-color);
   color: var(--primary-color);
   padding: 15px;
   transform: translateY(100%);
@@ -130,31 +129,27 @@ footer {
 }
 
 .blog-post:hover .overlay {
-  transform: translateY(0); 
+  transform: translateY(0);
 }
 
 .overlay h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 18px;
   color: white;
 }
 
 .overlay .description {
-  font-size: 0.9rem;
+  font-size: 12px;
   margin-top: 10px;
 }
 
 .catchy-sentence {
-  display:flex;
-  align-items: center;
-  flex:2;
-  height: 100%;
-  font-size: 16px;
+  flex: 2;
+  font-size: 14px;
   color: var(--text-color);
-  text-align: left; 
+  text-align: left;
   overflow-y: scroll;
 }
-
 
 /* about specific styles */
 #about-section {
@@ -164,7 +159,7 @@ footer {
 }
 
 #about-section article {
-  background: var(--primary-color); 
+  background: var(--primary-color);
   margin: 20px 0;
   padding: 20px;
   border-radius: 8px;
@@ -173,8 +168,8 @@ footer {
 }
 
 #about-section article:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .team-container {
@@ -195,13 +190,13 @@ footer {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  border: 3px solid #667eea; /
+  border: 3px solid var(--text-color);
 }
 
 .team-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .team-member h3 {
@@ -222,7 +217,7 @@ footer {
 }
 
 #contact-section article {
-  background: rgba(255, 255, 255, 0.8); 
+  background: rgba(255, 255, 255, 0.8);
   margin: 20px 0;
   padding: 20px;
   border-radius: 8px;
@@ -231,8 +226,8 @@ footer {
 }
 
 #contact-section article:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 form {
@@ -252,48 +247,45 @@ form input, form textarea {
   border: 1px solid var(--secondary-color);
   border-radius: 4px;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.9); 
+  background: rgba(255, 255, 255, 0.9);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   outline: none;
 }
 
 form input:focus, form textarea:focus {
   border-color: var(--text-color);
-  box-shadow: 0 0 8px rgba(102, 126, 234, 0.5); 
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
 }
 
 form button {
   border: 1px solid var(--text-color);
-  background:transparent;
+  background: transparent;
   font-weight: bold;
-  color:var(--text-color);
+  color: var(--text-color);
   padding: 10px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s ease;
 }
-@media (max-width:768px) {
-  form button{
-    border:none;
-    background:var(--text-color);
-    color:var(--primary-color)
+@media (max-width: 768px) {
+  form button {
+    border: none;
+    background: var(--text-color);
+    color: var(--primary-color);
   }
 }
 form button:hover {
   background: var(--text-color);
-  color:var(--primary-color);
+  color: var(--primary-color);
   font-weight: bold;
 }
 
-
-
-article.reach-us{
-  a{
+article.reach-us {
+  a {
     text-decoration: none;
-    
   }
-  ul{
+  ul {
     text-decoration: none;
     list-style: none;
   }
