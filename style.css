@@ -1,77 +1,93 @@
-
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+*,*::before,::after{
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  color: #333;
-  /* background-image: url(images/bg2.jpg); */
-  background-size: cover;
-  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #FFFFFF;
+  --secondary-color: #E0DED5;
+  --text-color:#000000;
+  --tertiary-color:#F5F5F5;
+}
+body {
+  font-family: 'Poppins','Arial', sans-serif;
+  background: var(--primary-color);
+  color: var(--text-color);
   position: relative;
 }
-
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2); 
-  z-index: -1;
-}
-
-header {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-
 nav {
-  background: #667eea; 
-  padding: 10px;
+  display:flex;
+  background: var(--primary-color); 
+  height: 50px;
+  padding:10px 100px;
   text-align: center;
+  border-bottom: 1px solid var(--text-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap:16px;
+  align-items: center;
 }
 
 nav a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
-  margin: 0 15px;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+}
+nav a.logo{
+  font-weight: bold;
 }
 
-nav a:hover {
-  color: #764ba2; 
+footer p {
+  color: var(--primary-color);
+  margin: 10px 0 0;
+  font-size: 0.9rem;
 }
 
+footer {
+  background-color:var(--text-color);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
 
+/* index.html specific styles */ 
 .blog-container {
   display: flex;
   flex-direction: column; 
   align-items: center; 
-  gap: 40px; 
-  padding: 20px;
+  gap: 32px; 
+  padding: 24px 100px;
 }
 
 
 .blog-post {
+  height:300px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 16px; 
   width: 100%; 
   max-width: 1200px; 
-  background: rgba(255, 255, 255, 0.8); 
-  padding: 20px;
+  background: var(--tertiary-color); 
+  padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex; 
-  align-items: center; 
-  gap: 20px; 
+}
+@media (max-width: 768px) {
+  nav{
+    padding:16px 32px;
+  }
+  .blog-container{
+    padding: 24px 32px; 
+  }
+  .blog-post{
+    flex-direction: column;
+    height:fit-content;
+  }
+  .blog-post .overlay{
+  transform: translateY(0); 
+  }
 }
 
 .blog-post:hover {
@@ -81,13 +97,13 @@ nav a:hover {
 
 .image-container {
   position: relative;
-  width: 60%; 
-  height: 300px;
+  height: 100%;
+  flex:1;
   border-radius: 8px;
   display: flex;
   justify-content: flex-start; 
   align-items: center;
-  background: rgba(0, 0, 0, 0.1);
+  background:var(--secondary-color);
   overflow:hidden;
 }
 
@@ -105,8 +121,8 @@ nav a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(102, 126, 234, 0.9); 
-  color: white;
+  background: var(--text-color); 
+  color: var(--primary-color);
   padding: 15px;
   transform: translateY(100%);
   transition: transform 0.3s ease;
@@ -129,14 +145,18 @@ nav a:hover {
 }
 
 .catchy-sentence {
-  width: 40%; 
-  font-size: 1rem;
-  font-style: italic;
-  color: #555;
+  display:flex;
+  align-items: center;
+  flex:2;
+  height: 100%;
+  font-size: 16px;
+  color: var(--text-color);
   text-align: left; 
+  overflow-y: scroll;
 }
 
 
+/* about specific styles */
 #about-section {
   max-width: 1200px;
   margin: 20px auto;
@@ -144,7 +164,7 @@ nav a:hover {
 }
 
 #about-section article {
-  background: rgba(255, 255, 255, 0.8); 
+  background: var(--primary-color); 
   margin: 20px 0;
   padding: 20px;
   border-radius: 8px;
@@ -194,7 +214,7 @@ nav a:hover {
   color: #555;
 }
 
-
+/* contact.html specific styles */
 #contact-section {
   max-width: 1200px;
   margin: 20px auto;
@@ -257,15 +277,6 @@ form button:hover {
 }
 
 
-footer {
-  background: white ; 
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 20px;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .reach-us {
   max-width: 1200px;
   margin: 0 auto;
@@ -289,11 +300,4 @@ footer {
   margin: 10px 0;
   font-size: 1rem;
   color: #333;
-}
-
-footer p {
-  background-color:#667eea ;
-  color: white;
-  margin: 10px 0 0;
-  font-size: 0.9rem;
 }
