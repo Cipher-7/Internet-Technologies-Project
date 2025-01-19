@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Contact - Bloggr</title>
-</head>
-<body>
-  <header>
-    <h1>Bloggr</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact - Bloggr</title>
+  </head>
+  <body>
+    <nav>
+      <a class="logo" href="index.html">
+        FASIH
+      </a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <section id="contact-section">
+      <article>
+        <h2>Contact Us</h2>
+        <p>
+          We'd love to hear from you! Whether you have a question, feedback, or
+          just want to say hello, feel free to reach out.
+        </p>
+      </article>
 
-  <section id="contact-section">
-    <article>
-      <h2>Contact Us</h2>
-      <p>
-        We'd love to hear from you! Whether you have a question, feedback, or
-        just want to say hello, feel free to reach out.
-      </p>
-    </article>
+      <article>
+        <h2>Contact Form</h2>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
 
-    <article>
-      <h2>Contact Form</h2>
-      <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </article>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </article>
-  </section>
-
-  <footer>
-    <div class="reach-us">
-      <h2>Other Ways to Reach Us</h2>
-      <ul>
-        <li>
-          <strong>Email:</strong>
-          <a href="mailto:info@Bloggr.com">info@Bloggr.com</a>
-        </li>
-        <li><strong>Phone:</strong> +123 456 7890</li>
-        <li><strong>Address:</strong> 123 Blog Street, Web City, Internet</li>
-      </ul>
-    </div>
-    <p>&copy; @Benexl @Modaniel @MikaeloMatrix. All rights reserved.</p>
-  </footer>
-</body>
+      <article class="reach-us">
+        <h2>Other Ways to Reach Us</h2>
+        <ul>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:info@Bloggr.com">info@Bloggr.com</a>
+          </li>
+          <li><strong>Phone:</strong> +123 456 7890</li>
+          <li><strong>Address:</strong> 123 Blog Street, Web City, Internet</li>
+        </ul>
+      </article>
+    </section>
+    <footer>
+      <p>&copy; @Benexl @Modaniel @MikaeloMatrix. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
