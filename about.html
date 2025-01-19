@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>About - Bloggr</title>
-  </head>
-  <body>
-    <header>
-      <h1>Bloggr</h1>
-    </header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>About - Bloggr</title>
+</head>
+<body>
+  <header>
+    <h1>Bloggr</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section id="about-section">
     <article>
       <h2>About Bloggr</h2>
       <p>
@@ -34,14 +36,29 @@
         Bloggr is run by a passionate team of developers, writers, and designers
         who believe in the power of storytelling.
       </p>
-      <p>
-        Meet the creators:
-      </p>
-      <ul>
-        <li><strong>Benexl</strong> - Lead Developer</li>
-        <li><strong>Modaniel</strong> - Content Strategist</li>
-        <li><strong>MikaeloMatrix</strong> - Researcher</li>
-      </ul>
+      <div class="team-container">
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="images/SpongeBob SquarePants.jpg" alt="Benexl">
+          </div>
+          <h3>Benexl</h3>
+          <p>Lead Developer</p>
+        </div>
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="images/modaniel.jpg" alt="Modaniel">
+          </div>
+          <h3>Modaniel</h3>
+          <p>Content Strategist</p>
+        </div>
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="images/patrick Star.jpg" alt="MikaeloMatrix">
+          </div>
+          <h3>MikaeloMatrix</h3>
+          <p>Researcher</p>
+        </div>
+      </div>
     </article>
 
     <article>
@@ -55,9 +72,10 @@
         Join us on this journey and be part of something bigger.
       </p>
     </article>
+  </section>
 
-    <footer>
-      <p>&copy; @Benexl @Modaniel @MikaeloMatrix. All rights reserved.</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; @Benexl @Modaniel @MikaeloMatrix. All rights reserved.</p>
+  </footer>
+</body>
 </html>
