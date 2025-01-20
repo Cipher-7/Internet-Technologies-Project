@@ -165,43 +165,14 @@ footer {
   text-align: left;
   height: 100%;
   overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Scrollbar Track */
-::-webkit-scrollbar {
-  width: 12px; /* Width of the vertical scrollbar */
-  height: 12px; /* Height of the horizontal scrollbar */
+.catchy-sentence::-webkit-scrollbar {
+  display: none;
 }
 
-/* Scrollbar Handle (Thumb) */
-::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scrollbar handle */
-  border-radius: 6px; /* Rounded corners */
-  border: 3px solid
-    transparent; /* Transparent border to create padding effect */
-  background-clip: content-box; /* Ensures the background doesn't cover the border */
-}
-
-/* Scrollbar Handle on Hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Darker color on hover */
-}
-
-/* Scrollbar Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the track */
-  border-radius: 6px; /* Rounded corners */
-}
-
-/* Scrollbar Track on Hover */
-::-webkit-scrollbar-track:hover {
-  background: #e1e1e1; /* Slightly darker track on hover */
-}
-
-/* Scrollbar Corner (where vertical and horizontal scrollbars meet) */
-::-webkit-scrollbar-corner {
-  background: #f1f1f1; /* Match the track color */
-} /* about specific styles */
 #about-section {
   max-width: 1200px;
   margin: 20px auto;
